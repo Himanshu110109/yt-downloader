@@ -14,8 +14,6 @@ A simple command-line tool to download YouTube videos and audio in different qua
 - ✅ Download Audio Only (MP3 format)
 - ✅ Interactive CLI with user-friendly prompts
 - ✅ Shows Estimated File Size before download
-- ✅ Saves Files Automatically to:  
-  `/storage/emulated/0/Download/`
 
 ---
 
@@ -98,12 +96,6 @@ You will see interactive prompts like this:
 🎬 Select video quality: (highest/1080p/720p)  
 📂 Estimated File Size: 50 MB  
 📥 Do you want to continue with the download? (Y/n)
-```
-
-✅ The downloaded file will be saved in:
-
-```
-/storage/emulated/0/Download/
 ```
 
 ---
