@@ -1,11 +1,12 @@
-Here’s your README file formatted with proper headings, code blocks, and a professional structure:
 
-```markdown
+
 # 🎬 YouTube Video Downloader CLI
 
 A simple command-line tool to download YouTube videos and audio in different qualities effortlessly.
 
 ---
+
+```markdown
 
 ## ✨ Features
 

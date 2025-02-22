@@ -7,7 +7,7 @@
     "ora": "^8.2.0",
     "path": "^0.12.7"
   },
-  "name": "yt",
+  "name": "ytdl-pro",
   "version": "1.0.0",
   "description": "An npm package to download yt videos.",
   "main": "index.js",
