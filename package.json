@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.4",
+    "chalk": "^5.4.1",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.4.2",
+    "ora": "^8.2.0",
+    "path": "^0.12.7"
+  },
+  "name": "yt",
+  "version": "1.0.0",
+  "description": "An npm package to download yt videos.",
+  "main": "index.js",
+  "bin": {
+  "youtube-downloader": "./index.js"
+},
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himanshu110109/yt-downloader.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "himanshu chandani",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Himanshu110109/yt-downloader/issues"
+  },
+  "homepage": "https://github.com/Himanshu110109/yt-downloader#readme"
+}
