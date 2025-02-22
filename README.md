@@ -6,7 +6,7 @@ A simple command-line tool to download YouTube videos and audio in different qua
 
 ---
 
-```markdown
+
 
 ## ✨ Features
 
