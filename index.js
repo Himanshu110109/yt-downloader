@@ -52,17 +52,35 @@ async function downloadYouTubeVideo() {
     const fileExtension = format === "Video" ? "mp4" : "mp3";
     const fileName = `${title}.${fileExtension}`;
     const filePath = path.join(downloadPath, fileName);
-    const formats = videoInfo.formats.map((f) => f.qualityLabel);
-    let selectedQuality = quality;
-
-    if (!formats.includes(quality)) {
+    const formats = videoInfo.formats;
+    
+    let selectedFormat = formats.find(f => f.qualityLabel === quality);
+    if (!selectedFormat) {
       console.log(chalk.yellow(`⚠️ Selected quality (${quality}) not available. Downloading at highest quality!`));
-      selectedQuality = "highest";
+      selectedFormat = formats.find(f => f.qualityLabel === "highest") || formats[0];
     }
 
-    console.log(chalk.yellow("📂 Estimated File Size: ~50MB (varies by quality)"));
+    const fileSizeInBytes = selectedFormat.contentLength || 0;
+    const fileSizeInMB = (fileSizeInBytes / (1024 * 1024)).toFixed(2);
+
+    console.log(chalk.yellow(`📂 Estimated File Size: ~${fileSizeInMB} MB`));
+
+    const confirm = await inquirer.prompt([
+      {
+        type: "confirm",
+        name: "proceed",
+        message: `Do you want to continue downloading this file (~${fileSizeInMB} MB)?`,
+        default: true,
+      },
+    ]);
+
+    if (!confirm.proceed) {
+      console.log(chalk.red("❌ Download canceled."));
+      return;
+    }
+
     const spinner = ora("Downloading...").start();
-    const stream = ytdl(url, { quality: format === "Video" ? selectedQuality : "highestaudio" });
+    const stream = ytdl(url, { quality: format === "Video" ? selectedFormat.itag : "highestaudio" });
 
     stream.pipe(fs.createWriteStream(filePath));
 
