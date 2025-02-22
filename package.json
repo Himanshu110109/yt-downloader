@@ -8,12 +8,12 @@
     "path": "^0.12.7"
   },
   "name": "ytdl-pro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An npm package to download yt videos.",
   "main": "index.js",
   "bin": {
-  "youtube-downloader": "./index.js"
-},
+    "youtube-downloader": "./index.js"
+  },
   "scripts": {
     "test": "npm run test"
   },
