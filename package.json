@@ -8,7 +8,7 @@
     "path": "^0.12.7"
   },
   "name": "ytdl-pro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An npm package to download yt videos.",
   "main": "index.js",
   "bin": {
