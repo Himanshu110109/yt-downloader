@@ -24,7 +24,7 @@ A simple command-line tool to download YouTube videos and audio in different qua
 To install the package globally, run:
 
 ```bash
-npm install -g your-package-name
+npm install -g ytdl-pro
 ```
 
 Now you can use it anywhere with:
@@ -40,7 +40,7 @@ youtube-downloader
 If you don’t want to install it globally, run directly using `npx`:
 
 ```bash
-npx your-package-name
+npx ytdl-pro
 ```
 
 ---
@@ -85,7 +85,7 @@ node index.js
 or
 
 ```bash
-npx your-package-name
+npx ytdl-pro
 ```
 
 You will see interactive prompts like this:
